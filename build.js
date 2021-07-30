@@ -45,6 +45,8 @@ async function main() {
     const client = new Discord.Client();
     try {
         await client.login(process.env.DISCORD_BOT_TOKEN);
+        client.user.setActivity("sich die Entbannungsanträge an", { type: "WATCHING" });
+        client.user.setStatus("ONLINE");
     } catch (e) {
         console.log(e);
         process.exit(1);
